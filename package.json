@@ -14,7 +14,10 @@
     "lint:prettier": "yarn run prettier --check",
     "lint:typescript": "tsc --noEmit",
     "format": "run-s format:*",
-    "format:prettier": "yarn run prettier --write"
+    "format:prettier": "yarn run prettier --write",
+    "test": "jest",
+    "test-ci": "jest --ci",
+    "coverage": "jest --coverage"
   },
   "dependencies": {
     "next": "10.0.6",
@@ -24,14 +27,26 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@testing-library/dom": "^7.29.4",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@types/jest": "^26.0.20",
     "@types/node": "^14.14.8",
     "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
+    "babel-jest": "^26.6.3",
+    "babel-plugin-dynamic-import-node": "^2.3.3",
+    "babel-plugin-inline-react-svg": "^1.1.2",
     "commitizen": "^4.2.3",
     "husky": "^5.0.8",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
+    "jest-fetch-mock": "^3.0.3",
+    "jest-next-dynamic": "^1.0.1",
     "lint-staged": "^10.5.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
+    "ts-jest": "^26.5.0",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^4.1.3"
   }
