@@ -12,6 +12,7 @@
     "prettier": "prettier \"**/*.{js,jsx,ts,tsx,json,md,css,scss,yaml,yml}\"",
     "lint": "run-p --continue-on-error lint:*",
     "lint:prettier": "yarn run prettier --check",
+    "lint:typescript": "tsc --noEmit",
     "format": "run-s format:*",
     "format:prettier": "yarn run prettier --write"
   },
@@ -23,10 +24,15 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@types/node": "^14.14.8",
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^16.9.9",
     "commitizen": "^4.2.3",
     "husky": "^5.0.8",
     "lint-staged": "^10.5.3",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.1.3"
   }
 }
