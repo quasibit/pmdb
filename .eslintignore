@@ -1,0 +1,10 @@
+node_modules
+.next
+.cache
+out
+build
+public
+coverage
+*.d.ts
+.eslintrc.js
+.eslint/**

@@ -14,12 +14,16 @@ jest.mock("next/router", () => ({
       route: "/",
       query: {},
       asPath: "/",
-      push: jest.fn(async () => Promise.resolve(true)),
-      replace: jest.fn(async () => Promise.resolve(true)),
-      reload: jest.fn(async () => Promise.resolve(true)),
-      prefetch: jest.fn(async () => Promise.resolve()),
-      back: jest.fn(async () => Promise.resolve(true)),
-      beforePopState: jest.fn(async () => Promise.resolve(true)),
+      push: jest.fn(async () => await Promise.resolve(true)),
+      replace: jest.fn(async () => await Promise.resolve(true)),
+      reload: jest.fn(async () => await Promise.resolve(true)),
+
+      prefetch: jest.fn(async () => {
+        await Promise.resolve();
+      }),
+
+      back: jest.fn(async () => await Promise.resolve(true)),
+      beforePopState: jest.fn(async () => await Promise.resolve(true)),
       isFallback: false,
 
       events: {

@@ -1,6 +1,11 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { NextApiRequest, NextApiResponse } from "next";
 
-export default (request: NextApiRequest, response: NextApiResponse) => {
-  response.status(200).json({ name: "John Doe" });
-};
+export default function hello(
+  request: NextApiRequest,
+  response: NextApiResponse
+) {
+  const success = 200;
+
+  response.status(success).json({ name: "John Doe" });
+}

@@ -1,4 +1,10 @@
 {
   "*.{js,jsx,ts,tsx,json,md,css,scss,yaml,yml}": "prettier --write",
-  "*.md": ["markdownlint --fix"]
+  "*.md": ["markdownlint --fix"],
+  "*.{js,jsx,ts,tsx}": [
+    "eslint --cache --ext .ts,.tsx --fix"
+  ],
+  "*.json": [
+    "eslint --cache --cache-location .eslintjsoncache --ext .json --no-eslintrc --config .eslintjsonrc --fix"
+  ]
 }

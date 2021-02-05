@@ -1,0 +1,6 @@
+// ESLint configuration for json files.
+{
+  "extends": [
+    "plugin:json/recommended"
+  ]
+}

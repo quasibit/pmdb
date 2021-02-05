@@ -8,7 +8,7 @@ beforeAll(async () => {
 });
 
 describe("Home", () => {
-  it("renders without crashing", async () => {
+  it("renders without crashing", () => {
     render(<Home />);
   });
 });
