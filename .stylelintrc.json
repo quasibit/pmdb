@@ -1,0 +1,78 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "linaria/stylelint-config",
+    "stylelint-prettier/recommended"
+  ],
+  "plugins": [
+    "stylelint-order",
+    "stylelint-declaration-strict-value",
+    "stylelint-declaration-block-no-ignored-properties",
+    "stylelint-color-format",
+    "stylelint-high-performance-animation",
+    "stylelint-no-indistinguishable-colors",
+    "stylelint-selector-tag-no-without-class"
+  ],
+  "rules": {
+    "no-empty-source": null,
+    "no-missing-end-of-source-newline": null,
+    "max-nesting-depth": 3,
+    "max-line-length": 80,
+    "string-quotes": "double",
+    "order/order": [
+      [
+        "custom-properties",
+        "dollar-variables",
+        {
+          "type": "at-rule",
+          "name": "extend"
+        },
+        {
+          "type": "at-rule",
+          "name": "include",
+          "hasBlock": false
+        },
+        "declarations",
+        {
+          "type": "at-rule",
+          "name": "include",
+          "hasBlock": true
+        },
+        "rules",
+        "at-rules"
+      ]
+    ],
+    "function-url-no-scheme-relative": true,
+    "function-url-quotes": "always",
+    "font-weight-notation": "numeric",
+    "media-feature-name-no-unknown": true,
+    "media-query-list-comma-newline-before": "never-multi-line",
+    "at-rule-no-vendor-prefix": true,
+    "media-feature-name-no-vendor-prefix": true,
+    "property-no-vendor-prefix": true,
+    "value-no-vendor-prefix": true,
+    "selector-no-vendor-prefix": true,
+    "color-named": "never",
+    "color-format/format": { "format": "rgb" },
+    "plugin/declaration-block-no-ignored-properties": true,
+    "scale-unlimited/declaration-strict-value": [
+      ["/color/", "z-index", "font-size", "font-family"],
+      {
+        "ignoreKeywords": {
+          "": ["inherit"],
+          "/color/": ["currentColor", "transparent", "inherit"]
+        },
+        "ignoreValues": ["=>", "/^\\(?props.+$/", "/^common.+$/"]
+      }
+    ],
+    "plugin/no-low-performance-animation-properties": true,
+    "plugin/stylelint-no-indistinguishable-colors": true,
+    "plugin/selector-tag-no-without-class": ["div", "span"],
+    "value-keyword-case": [
+      "lower",
+      {
+        "ignoreKeywords": ["/^props.+$/", "/^common.+$/"]
+      }
+    ]
+  }
+}

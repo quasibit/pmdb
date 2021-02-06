@@ -6,8 +6,14 @@ import { styled } from "linaria/react";
 
 import styles from "@styles/Home.module.css";
 
+const theme = {
+  colors: {
+    main: "red",
+  },
+};
+
 const Paragraph = styled.p`
-  color: red;
+  color: ${theme.colors.main};
 `;
 
 export default function Home(): ReactElement {
