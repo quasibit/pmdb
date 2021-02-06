@@ -3,6 +3,7 @@ const generalRules = require("./.eslint/generalRules");
 const developmentRules = require("./.eslint/developmentRules");
 const scriptRules = require("./.eslint/scriptRules");
 const dataRules = require("./.eslint/dataRules");
+const testRules = require("./.eslint/testRules");
 
 module.exports = {
   extends: [
@@ -34,5 +35,5 @@ module.exports = {
     },
   },
   rules: generalRules,
-  overrides: [developmentRules, scriptRules, dataRules],
+  overrides: [developmentRules, scriptRules, dataRules, testRules],
 };

@@ -8,6 +8,7 @@ module.exports = {
   setupFiles: ["./tests/config/setup.js"],
   setupFilesAfterEnv: ["./tests/config/setupAfterEnv.js"],
   testMatch: ["**/?(*.)+(spec|test).[jt]s?(x)"],
+
   testPathIgnorePatterns: ["/.next/", "/node_modules/", "/coverage/"],
 
   collectCoverageFrom: [

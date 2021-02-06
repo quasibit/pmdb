@@ -7,8 +7,13 @@ beforeAll(async () => {
   await preloadAll();
 });
 
-describe("Home", () => {
-  it("renders without crashing", () => {
-    render(<Home />);
+describe("home", () => {
+  test("has h1", async () => {
+    expect.assertions(1);
+
+    const { findAllByRole } = render(<Home />);
+    const titles = await findAllByRole("heading", { level: 1 });
+
+    expect(titles).toHaveLength(1);
   });
 });
