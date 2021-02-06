@@ -2,8 +2,13 @@
 /* eslint-disable react/jsx-no-literals */
 import { ReactElement } from "react";
 import Head from "next/head";
+import { styled } from "linaria/react";
 
 import styles from "@styles/Home.module.css";
+
+const Paragraph = styled.p`
+  color: red;
+`;
 
 export default function Home(): ReactElement {
   return (
@@ -26,7 +31,9 @@ export default function Home(): ReactElement {
         <div className={styles.grid}>
           <a className={styles.card} href="https://nextjs.org/docs">
             <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+            <Paragraph>
+              Find in-depth information about Next.js features and API.
+            </Paragraph>
           </a>
 
           <a className={styles.card} href="https://nextjs.org/learn">

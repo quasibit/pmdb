@@ -128,6 +128,11 @@ module.exports = {
       },
     },
     {
+      // Allow both camel and pascal case for variables to support styled components.
+      selector: "variable",
+      format: ["strictCamelCase", "StrictPascalCase"],
+    },
+    {
       selector: "typeLike",
       format: ["StrictPascalCase"],
     },

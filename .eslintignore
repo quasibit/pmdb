@@ -8,3 +8,4 @@ coverage
 *.d.ts
 .eslintrc.js
 .eslint/**
+.linaria-cache

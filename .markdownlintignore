@@ -5,3 +5,4 @@ out
 build
 public
 coverage
+.linaria-cache
