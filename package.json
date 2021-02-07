@@ -27,7 +27,8 @@
     "format:stylelint": "yarn run stylelint --fix",
     "test": "jest",
     "test-ci": "jest --ci",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "generate": "plop"
   },
   "dependencies": {
     "linaria": "^3.0.0-beta.1",
@@ -69,7 +70,9 @@
     "jest-next-dynamic": "^1.0.1",
     "lint-staged": "^10.5.3",
     "markdownlint-cli": "^0.26.0",
+    "node-plop": "^0.26.2",
     "npm-run-all": "^4.1.5",
+    "plop": "^2.7.4",
     "prettier": "^2.2.1",
     "stylelint": "^13.9.0",
     "stylelint-color-format": "^1.1.0",
@@ -84,6 +87,7 @@
     "stylelint-prettier": "^1.1.2",
     "stylelint-selector-tag-no-without-class": "^2.0.3",
     "ts-jest": "^26.5.0",
+    "ts-node": "^9.1.1",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^4.1.3"
   }

@@ -9,7 +9,10 @@ module.exports = {
     "**/*.test.ts",
     "**/*.test.tsx",
     "./*.js",
+    "./*.ts",
     "./tests/config/**/*.js",
+    "./.*/**/*.js",
+    "./.*/**/*.ts",
   ],
   rules: {
     // Allow import of dev dependencies or private modules.

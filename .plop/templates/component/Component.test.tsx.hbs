@@ -1,0 +1,13 @@
+import { render } from "@testing-library/react";
+
+import {{pascalCase name}} from "./{{pascalCase name}}";
+
+describe("{{kebabCase name}}", () => {
+  test("renders something", () => {
+    expect.hasAssertions();
+
+    const { container } = render(<{{pascalCase name}} {{camelCase name}}=\{{}} />);
+
+    expect(container.children.length).toBeGreaterThanOrEqual(1);
+  });
+});

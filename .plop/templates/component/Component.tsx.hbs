@@ -1,0 +1,25 @@
+import { ReactElement } from "react";
+
+import { Container } from "./{{pascalCase name}}.styles";
+import {{pascalCase name}}Type from "./{{pascalCase name}}.type";
+
+interface {{pascalCase name}}Properties {
+  {{camelCase name}}: {{pascalCase name}}Type;
+}
+
+/**
+ * Render {{lowerCase name}}.
+ *
+ * @param { {{~pascalCase name}}Properties} param0 Component properties.
+ * @param { {{~pascalCase name}}Type} param0.{{camelCase name}} {{sentenceCase name}}.
+ * @returns {ReactElement} {{sentenceCase name}} react element.
+ */
+function {{pascalCase name}}({ {{camelCase name}} }: {{pascalCase name}}Properties): ReactElement {
+  return (
+    <Container>
+      <pre>{JSON.stringify({{camelCase name}})}</pre>
+    </Container>
+  );
+}
+
+export default {{pascalCase name}};
