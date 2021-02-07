@@ -16,6 +16,12 @@ const Paragraph = styled.p`
   color: ${theme.colors.main};
 `;
 
+/**
+ * Renders the home page.
+ *
+ * @exports
+ * @returns {ReactElement} Home react element.
+ */
 export default function Home(): ReactElement {
   return (
     <div className={styles.container}>

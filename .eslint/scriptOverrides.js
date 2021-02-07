@@ -1,4 +1,4 @@
-const developmentRules = require("./developmentRules");
+const developmentRules = require("./developmentOverrides");
 
 // Override rules for build and development scripts.
 module.exports = {

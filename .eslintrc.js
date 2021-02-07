@@ -1,9 +1,13 @@
 const settings = require("./.eslint/settings");
-const generalRules = require("./.eslint/generalRules");
-const developmentRules = require("./.eslint/developmentRules");
-const scriptRules = require("./.eslint/scriptRules");
-const dataRules = require("./.eslint/dataRules");
-const testRules = require("./.eslint/testRules");
+const importRules = require("./.eslint/importRules");
+const reactRules = require("./.eslint/reactRules");
+const namingRules = require("./.eslint/namingRules");
+const nodeRules = require("./.eslint/nodeRules");
+const jsdocRules = require("./.eslint/jsdocRules");
+const developmentOverrides = require("./.eslint/developmentOverrides");
+const scriptOverrides = require("./.eslint/scriptOverrides");
+const dataOverrides = require("./.eslint/dataOverrides");
+const testOverrides = require("./.eslint/testOverrides");
 
 module.exports = {
   extends: [
@@ -16,6 +20,7 @@ module.exports = {
     "plugin:react/all",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/strict",
+    "plugin:jsdoc/recommended",
     "prettier/react",
     "prettier/@typescript-eslint",
   ],
@@ -34,6 +39,17 @@ module.exports = {
       jsx: true,
     },
   },
-  rules: generalRules,
-  overrides: [developmentRules, scriptRules, dataRules, testRules],
+  rules: {
+    ...importRules,
+    ...reactRules,
+    ...namingRules,
+    ...nodeRules,
+    ...jsdocRules,
+  },
+  overrides: [
+    developmentOverrides,
+    scriptOverrides,
+    dataOverrides,
+    testOverrides,
+  ],
 };
