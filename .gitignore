@@ -36,5 +36,6 @@ yarn-error.log*
 # cache
 .eslintcache
 .eslintjsoncache
+.stylelintcache
 .cache
 .linaria-cache
