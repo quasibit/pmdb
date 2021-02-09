@@ -17,7 +17,7 @@ jobs:
           fetch-depth: 0
 
       # Setup cache paths
-      - name: Cache
+      - name: Setup cache
         uses: actions/cache@v2
         with:
           path: |
@@ -28,7 +28,7 @@ jobs:
             .stylelintcache
           key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
 
-      # Setup Node.js
+      # Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
@@ -39,16 +39,21 @@ jobs:
         run: yarn install --pure-lockfile
 
       # Lint commits
-      - uses: wagoid/commitlint-github-action@v2
+      - name: Lint commits
+        uses: wagoid/commitlint-github-action@v2
         env:
           NODE_PATH: ${{ github.workspace }}/node_modules
         with:
           failOnWarnings: true
 
-      # Lint
-      - name: Lint
+      # Lint code
+      - name: Lint source code
         run: yarn run lint
 
-      # Test
-      - name: Test
+      # Test and coverage
+      - name: Run tests and coverage
         run: yarn run test-ci
+
+      # Upload coverage
+      - name: Upload coverage
+        uses: codecov/codecov-action@v1
