@@ -1,0 +1,54 @@
+name: Test
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout repository
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          # Necessary for commitlint
+          fetch-depth: 0
+
+      # Setup cache paths
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            .yarn
+            node_modules
+            .eslintcache
+            .eslintjsoncache
+            .stylelintcache
+          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
+
+      # Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14.x"
+
+      # Install
+      - name: Install dependencies
+        run: yarn install --pure-lockfile
+
+      # Lint commits
+      - uses: wagoid/commitlint-github-action@v2
+        env:
+          NODE_PATH: ${{ github.workspace }}/node_modules
+        with:
+          failOnWarnings: true
+
+      # Lint
+      - name: Lint
+        run: yarn run lint
+
+      # Test
+      - name: Test
+        run: yarn run test-ci
