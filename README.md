@@ -5,6 +5,18 @@
 
 Personal Movie Database. Web app to create, manage, and share movie lists.
 
+## Table of Contents
+
+- [Development](#development)
+  - [Requirements](#requirements)
+  - [Install](#install)
+  - [Getting started](#getting-started)
+  - [Tooling](#tooling)
+  - [Folder structure](#folder-structure)
+  - [Commands](#commands)
+  - [Environment variables](#environment-variables)
+  - [Generators](#generators)
+
 ## Development
 
 ### Requirements
