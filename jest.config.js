@@ -14,12 +14,15 @@ module.exports = {
   collectCoverageFrom: [
     "**/*.{js,jsx,ts,tsx}",
     "!**/*.d.ts",
-    "!**/.next/**",
     "!**/node_modules/**",
     "!**/tests/**",
     "!**/coverage/**",
-    "!jest.config.js",
-    "!commitlint.config.js",
+
+    // Exclude root config files
+    "!*.{js,ts}",
+
+    // Exclude tooling folders
+    "!.*/**",
   ],
 
   transform: {

@@ -1,6 +1,7 @@
 # PMDb
 
 [![Test workflow](https://github.com/quasibit/pmdb/workflows/Test/badge.svg)](https://github.com/quasibit/pmdb/actions?query=workflow%3ATest)
+[![codecov](https://codecov.io/gh/quasibit/pmdb/branch/master/graph/badge.svg?token=COsVHznzoX)](https://codecov.io/gh/quasibit/pmdb)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
